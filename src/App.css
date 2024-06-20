@@ -1,0 +1,51 @@
+.top{
+
+  display: flex;
+  gap: 10px;
+  
+}
+
+.top input{
+  height: 25px;
+  border-radius: 10px;
+  width: 300px;
+  border-width: 1px;
+  font-size: 20px;
+  padding: 10px;
+  width: 30%;
+}
+
+.top button{
+  width: 50px;
+  font-size: large;
+  border-radius: 10px;
+  border-width: 1px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  
+}
+
+.top button:hover{
+  transform: scale(1.1);
+}
+
+.tasklist-container{
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  gap: 10px;
+  font-size: larger;
+}
+
+.tasklist-container div{
+  cursor: pointer;
+  
+
+}
+
+.test{
+  display: flex;
+  gap: 10px;
+
+}
+
