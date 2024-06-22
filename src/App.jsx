@@ -7,7 +7,7 @@ import './App.css'
 
 export default function App (){
 
-  const [taskList, setTaskList] = useState([])
+  const [taskList, setTaskList] = useState(JSON.parse(localStorage.getItem('localTaskList')))
   const [userInput, setUserInput] = useState('')
  
   
@@ -40,7 +40,7 @@ export default function App (){
         isSelected: false
 
         },...prev])
-        console.log(taskList) 
+        
     setUserInput('')
   }
   else (alert('Input cannot be empty'))
@@ -88,10 +88,10 @@ export default function App (){
       prev.filter(el => el.id !== id)
     )})
   }
-console.log('component rendered')
+
 
  
-  useEffect(()=>{console.log(taskList)}, [taskList])
+  useEffect(()=>{localStorage.setItem('localTaskList', JSON.stringify(taskList))}, [taskList])
   
   let taskListContainer = taskList.map(el=>{
     return(
